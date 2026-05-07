@@ -24,7 +24,6 @@ A personal finance management app built with **HTML**, **CSS**, and **TypeScript
  📁 Project Structure
 
 financeapp/
-└── finance/
     ├── src/
     │   ├── main.ts            # App entry point
     │   ├── auth.ts            # Login, register, logout logic
