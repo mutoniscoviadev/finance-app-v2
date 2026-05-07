@@ -49,3 +49,112 @@ body {
   padding: 24px;
   margin-top: 24px;
 }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    padding: 0;
+    z-index: 100;
+    overflow-x: auto;
+  }
+
+  .sidebar-logo { display: none; }
+  .sidebar-bottom { display: none; }
+
+  .nav-links {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 8px 0;
+  }
+
+  .nav-item {
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 12px;
+    font-size: 10px;
+    border-left: none;
+    border-top: 3px solid transparent;
+    text-align: center;
+  }
+
+  .nav-item.active {
+    border-left: none;
+    border-top-color: var(--green);
+    border-radius: 0;
+  }
+
+  .nav-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  #app {
+    margin-left: 0 !important;
+    padding: 16px 16px 80px;
+    width: 100%;
+  }
+
+  .overview-grid,
+  .budgets-grid,
+  .bills-summary,
+  .pots-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .auth-page {
+    flex-direction: column;
+  }
+
+  .auth-left {
+    width: 100%;
+    padding: 32px 24px;
+    min-height: auto;
+  }
+
+  .auth-right {
+    padding: 24px 16px;
+  }
+
+  .auth-card {
+    padding: 24px 20px;
+  }
+
+  /* Fix overview two column layout */
+  div[style*="grid-template-columns:1.5fr 1fr"] {
+    display: block !important;
+  }
+
+  div[style*="grid-template-columns:1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    display: grid !important;
+  }
+
+  /* Transactions table */
+  .tx-table-header { display: none; }
+
+  .tx-table-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 4px;
+  }
+
+  .tx-col-category,
+  .tx-col-date {
+    font-size: 11px;
+  }
+
+  /* Bills table */
+  .bills-table th:nth-child(2),
+  .bills-table td:nth-child(2) { display: none; }
+
+  .bills-table th:nth-child(5),
+  .bills-table td:nth-child(5) { display: none; }
+}
