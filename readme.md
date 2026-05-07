@@ -58,7 +58,7 @@ financeapp/
 
 ```bash
 git clone <your-repo-url>
-cd finance
+cd financeapp
 ```
 
  2. Install dependencies
