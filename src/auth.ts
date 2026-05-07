@@ -5,11 +5,19 @@ export interface User {
 }
 
 export function getUsers(): User[] {
-  return JSON.parse(localStorage.getItem('finance_users') || '[]');
+  try {
+    return JSON.parse(localStorage.getItem('finance_users') || '[]');
+  } catch {
+    return [];
+  }
 }
 
 export function getCurrentUser(): User | null {
-  return JSON.parse(localStorage.getItem('finance_current_user') || 'null');
+  try {
+    return JSON.parse(localStorage.getItem('finance_current_user') || 'null');
+  } catch {
+    return null;
+  }
 }
 
 export function saveUser(user: User): void {
@@ -21,7 +29,7 @@ export function saveUser(user: User): void {
 export function login(email: string, password: string): User | null {
   const users = getUsers();
   const found = users.find(
-    u => u.email.toLowerCase() === email.toLowerCase().trim() &&
+    u => u.email.toLowerCase().trim() === email.toLowerCase().trim() &&
          u.password === password
   );
   if (found) {
@@ -32,7 +40,6 @@ export function login(email: string, password: string): User | null {
 }
 
 export function logout(): void {
-  // Only remove session — keep users and data!
   localStorage.removeItem('finance_current_user');
 }
 
