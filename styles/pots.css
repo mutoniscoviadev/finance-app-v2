@@ -1,0 +1,91 @@
+.pots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.pot-card-full {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.pot-card-top {
+  height: 8px;
+}
+
+.pot-card-body {
+  padding: 24px;
+}
+
+.pot-card-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.pot-total-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.pot-total-amount {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.pot-progress-track {
+  height: 8px;
+  background: var(--beige-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.pot-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.pot-progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.pot-progress-pct {
+  font-weight: 700;
+}
+
+.pot-card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pot-action-btn {
+  flex: 1;
+  background: var(--beige);
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pot-action-btn:hover { background: var(--beige-dark); }
+
+.pot-action-btn.danger {
+  background: #FAECEA;
+  color: var(--red);
+}
+
+.pot-action-btn.danger:hover { opacity: 0.8; }

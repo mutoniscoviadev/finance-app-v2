@@ -1,0 +1,49 @@
+.add-tx-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.add-tx-card h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.add-tx-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.cancel-btn {
+  flex: 1;
+  background: var(--beige);
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cancel-btn:hover { background: var(--beige-dark); }
+
+.save-btn {
+  flex: 1;
+  background: var(--text);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.save-btn:hover { background: #333; }

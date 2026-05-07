@@ -1,0 +1,51 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --beige:       #F8F4F0;
+  --beige-dark:  #F2EDE8;
+  --sidebar-bg:  #201F24;
+  --green:       #277C78;
+  --green-light: #E6F3F2;
+  --red:         #C94736;
+  --yellow:      #F2CDAC;
+  --purple:      #626070;
+  --blue:        #82C9D7;
+  --text:        #201F24;
+  --text-muted:  #98908B;
+  --border:      #D9D4D0;
+  --white:       #FFFFFF;
+  --radius:      12px;
+  --font:        'Public Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--beige);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+#app {
+  flex: 1;
+  margin-left: 300px;
+  padding: 32px 40px;
+  width: calc(100% - 300px);
+  overflow-x: hidden;
+}
+
+.section-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-top: 24px;
+}
